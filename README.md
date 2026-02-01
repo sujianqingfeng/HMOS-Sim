@@ -1,4 +1,4 @@
-# HMOSSimMenu
+# HMOSSimApp
 
 macOS 菜单栏（状态栏）常驻的小工具：管理 DevEco 的鸿蒙模拟器实例，显示 `hdc` 在线状态，并提供 `hilog` 流式查看窗口。
 
@@ -10,8 +10,6 @@ macOS 菜单栏（状态栏）常驻的小工具：管理 DevEco 的鸿蒙模拟
 ## 运行
 
 - Xcode（推荐）：打开 `HMOSSimApp/HMOSSimApp.xcodeproj` 运行 `HMOSSimApp`
-- SwiftPM：打开 `Package.swift` 运行 `HMOSSimMenu`（命令行可执行程序形态）
-- 终端：`swift run`（SwiftPM 方式）
 
 首次运行建议去 Settings 里确认以下路径（默认按 DevEco 安装在 `/Applications` 推断）：
 

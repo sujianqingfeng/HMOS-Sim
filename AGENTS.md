@@ -8,15 +8,12 @@
     - `Services/`: Process execution and DevEco/hdc integration.
     - `Views/`: SwiftUI UI (Dashboard, Logs, menu bar, Settings).
     - `Resources/`: `Info.plist`, `Assets.xcassets`.
-- `Sources/HMOSSimMenu/`: SwiftPM variant of the same app logic (kept for quick CLI/SPM runs).
 - Tests: none yet.
 
 ## Build, Test, and Development Commands
 
 - Build Xcode app: `xcodebuild -project HMOSSimApp/HMOSSimApp.xcodeproj -target HMOSSimApp -configuration Debug build`
 - Run locally (recommended): open `HMOSSimApp/HMOSSimApp.xcodeproj` in Xcode and Run.
-- Build SwiftPM target: `swift build`
-- Run SwiftPM target: `swift run`
 
 The app shells out to DevEco tools (Emulator/hdc). Configure paths in Settings if autodetection fails.
 
@@ -45,4 +42,3 @@ No test suite is configured. When adding tests, prefer `XCTest` under `HMOSSimAp
 
 - External process execution is core functionality—avoid hardcoding machine-specific paths.
 - Keep defaults in `UserDefaults` keys (see `DefaultsKey`) and validate executables before running.
-
