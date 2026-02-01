@@ -18,7 +18,7 @@ struct HMOSSimApp: App {
             MenuContentView()
                 .environmentObject(appModel)
         } label: {
-            Label("HMOS Sim", systemImage: "cpu")
+            Label("HMOS Sim", image: "StatusBarIcon")
         }
 
         WindowGroup("Logs", id: "logs") {
