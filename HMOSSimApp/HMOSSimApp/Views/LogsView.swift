@@ -54,6 +54,7 @@ struct LogsView: View {
                         .frame(width: 6, height: 6)
                     
                     Picker("", selection: $hilog.selectedConnectKey) {
+                        Text("No target selected").tag(nil as String?)
                         ForEach(visibleTargets, id: \.connectKey) { target in
                             Text("\(target.connectKey) (\(target.state))")
                                 .tag(Optional(target.connectKey))
@@ -98,7 +99,7 @@ struct LogsView: View {
                     )
                     
                     ToggleButton(
-                        icon: "text.line.last",
+                        icon: "arrow.left.and.right",
                         isOn: $lineWrap,
                         color: .purple
                     )
