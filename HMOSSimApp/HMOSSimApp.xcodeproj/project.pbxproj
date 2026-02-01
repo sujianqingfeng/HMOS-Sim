@@ -23,6 +23,7 @@
 		B0000000000000000000010E /* MenuContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000000000000000000020E /* MenuContentView.swift */; };
 		B0000000000000000000010F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000000000000000000020F /* SettingsView.swift */; };
 		B00000000000000000000110 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000211 /* Assets.xcassets */; };
+		B00000000000000000000111 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000212 /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		B0000000000000000000020E /* MenuContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuContentView.swift; sourceTree = "<group>"; };
 		B0000000000000000000020F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B00000000000000000000210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B00000000000000000000212 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		B00000000000000000000211 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +118,7 @@
 				B0000000000000000000020D /* LogsView.swift */,
 				B0000000000000000000020E /* MenuContentView.swift */,
 				B0000000000000000000020F /* SettingsView.swift */,
+				B00000000000000000000212 /* Theme.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				B0000000000000000000010D /* LogsView.swift in Sources */,
 				B0000000000000000000010E /* MenuContentView.swift in Sources */,
 				B0000000000000000000010F /* SettingsView.swift in Sources */,
+				B00000000000000000000111 /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

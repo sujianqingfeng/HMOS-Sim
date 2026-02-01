@@ -7,19 +7,24 @@ struct DevEcoToolsConfig: Equatable {
     var emulatorImageRootPath: String
     var refreshIntervalSeconds: Double
 
+    static func defaultPaths() -> (emulatorPath: String, hdcPath: String, emulatorInstancePath: String, emulatorImageRootPath: String) {
+        let home = FileManager.default.homeDirectoryForCurrentUser.path
+        return (
+            emulatorPath: "/Applications/DevEco-Studio.app/Contents/tools/emulator/Emulator",
+            hdcPath: "/Applications/DevEco-Studio.app/Contents/sdk/default/openharmony/toolchains/hdc",
+            emulatorInstancePath: "\(home)/.Huawei/Emulator/deployed",
+            emulatorImageRootPath: "\(home)/Library/Huawei/Sdk"
+        )
+    }
+
     static func loadFromDefaults() -> Self {
         let defaults = UserDefaults.standard
+        let defaultsPaths = defaultPaths()
 
-        let home = FileManager.default.homeDirectoryForCurrentUser.path
-        let defaultEmulator = "/Applications/DevEco-Studio.app/Contents/tools/emulator/Emulator"
-        let defaultHdc = "/Applications/DevEco-Studio.app/Contents/sdk/default/openharmony/toolchains/hdc"
-        let defaultInstancePath = "\(home)/.Huawei/Emulator/deployed"
-        let defaultImageRoot = "\(home)/Library/Huawei/Sdk"
-
-        let emulatorPath = defaults.string(forKey: DefaultsKey.emulatorPath) ?? defaultEmulator
-        let hdcPath = defaults.string(forKey: DefaultsKey.hdcPath) ?? defaultHdc
-        let emulatorInstancePath = defaults.string(forKey: DefaultsKey.emulatorInstancePath) ?? defaultInstancePath
-        let emulatorImageRootPath = defaults.string(forKey: DefaultsKey.emulatorImageRootPath) ?? defaultImageRoot
+        let emulatorPath = defaults.string(forKey: DefaultsKey.emulatorPath) ?? defaultsPaths.emulatorPath
+        let hdcPath = defaults.string(forKey: DefaultsKey.hdcPath) ?? defaultsPaths.hdcPath
+        let emulatorInstancePath = defaults.string(forKey: DefaultsKey.emulatorInstancePath) ?? defaultsPaths.emulatorInstancePath
+        let emulatorImageRootPath = defaults.string(forKey: DefaultsKey.emulatorImageRootPath) ?? defaultsPaths.emulatorImageRootPath
         let refreshIntervalSeconds: Double = {
             if let number = defaults.object(forKey: DefaultsKey.refreshIntervalSeconds) as? NSNumber {
                 return max(0.5, number.doubleValue)
