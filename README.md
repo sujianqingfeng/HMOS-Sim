@@ -2,6 +2,10 @@
 
 macOS 菜单栏（状态栏）常驻的小工具：管理 DevEco 的鸿蒙模拟器实例，显示 `hdc` 在线状态，并提供 `hilog` 流式查看窗口。
 
+## 截图
+
+![HMOSSimApp 截图](screenshots/image.png)
+
 ## 需求
 
 - macOS 13+
